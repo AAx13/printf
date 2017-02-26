@@ -18,6 +18,5 @@ int print_str(char *str)
 		_putchar(str[i]);
 		len++;
 	}
-	/* + 1 for null byte */
-	return (len + 1);
+	return (len);
 }

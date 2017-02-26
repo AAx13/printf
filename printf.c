@@ -39,13 +39,13 @@ int _printf(const char *format, ...)
 
 				case 's':
 					str = va_arg(args, char *);
-					count2 += print_str(str);
+					count2 = print_str(str);
 					count++;
 					break;
 
 				case '%':
-					count++;
 					_putchar('%');
+					count++;
 					break;
 			}
 		}
@@ -55,6 +55,6 @@ int _printf(const char *format, ...)
 	{
 		len -= count;
 	}
-	len += count2;
+	len += count2 - 1;
 	return (len);
 }
