@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 					str = va_arg(args, char *);
 					count2 += print_str(str);
 					count++;
-					if (count > 2)
+					if (count > 0)
 					{
 						count2 -= 1;
 					}
@@ -60,6 +60,6 @@ int _printf(const char *format, ...)
 	{
 		len -= count;
 	}
-	len += count2 - 1;
+	len += count2;
 	return (len);
 }
