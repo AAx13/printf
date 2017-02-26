@@ -8,18 +8,13 @@
  *
  * Return: Number of characters printed (excluding null byte for strings).
  */
-
-/* deal with multiple % back to back */
-/* deal with character return length */
-/* deal with string return length */
 int _printf(const char *format, ...)
 {
 	int len, ui, count, count2;
-	char *str;
 	va_list args;
 
-	count2 = 0;
 	count = 0;
+	count2 = 0;
 	va_start(args, format);
 	for (len = 0; format[len] != '\0'; len++)
 	{
@@ -39,13 +34,8 @@ int _printf(const char *format, ...)
 					break;
 
 				case 's':
-					str = va_arg(args, char *);
-					count2 += print_str(str);
 					count++;
-					if (count > 0)
-					{
-						count2 -= 1;
-					}
+					count2 += str_case(args, count);
 					break;
 
 				case '%':
@@ -57,9 +47,7 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 	if (count > 0)
-	{
 		len -= count;
-	}
 	len += count2;
 	return (len);
 }
