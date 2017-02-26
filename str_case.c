@@ -1,6 +1,13 @@
 #include <stdarg.h>
 #include "holberton.h"
 
+/**
+ * str_case - blah
+ * @args: yep
+ * @count: yep
+ *
+ * Return: yep
+ */
 int str_case(va_list args, int count)
 {
 	int count2;

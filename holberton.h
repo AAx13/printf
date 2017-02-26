@@ -11,7 +11,7 @@ int print_str(char *str);
 /* print_num - function that prints numbers to stdout. */
 void print_num(int n);
 
-/* */
+/* str_case - blah */
 int str_case(va_list args, int count);
 
 /* _printf - function that produces output according to a format. */
