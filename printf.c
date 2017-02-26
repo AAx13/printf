@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -39,8 +40,12 @@ int _printf(const char *format, ...)
 
 				case 's':
 					str = va_arg(args, char *);
-					count2 = print_str(str);
+					count2 += print_str(str);
 					count++;
+					if (count > 2)
+					{
+						count2 -= 1;
+					}
 					break;
 
 				case '%':
