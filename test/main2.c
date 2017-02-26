@@ -4,9 +4,10 @@
 int main(void)
 {
 	int len, len2;
+	char *s = "Holberton";
 
-	len = _printf("%%%%%%%%%%%%%%%\n");
-	len2 = printf("%%%%%%%%%%%%%%%\n");
+	len = _printf("%s\n", s);
+	len2 = printf("%s\n", s);
 
 	printf("my printf: [ %d ] | original printf: [ %d ]\n", len, len2);
 
