@@ -5,7 +5,7 @@
 int _putchar(char c);
 
 /* print_str - writes a string to stdout. */
-void print_str(char *str);
+int print_str(char *str);
 
 /* print_num - function that prints numbers to stdout. */
 void print_num(int n);
