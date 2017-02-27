@@ -25,23 +25,24 @@ int _printf(const char *format, ...)
 		else
 		{
 			len++;
+			count++;
 			switch (format[len])
 			{
 				case 'c':
 					ui =  va_arg(args, int);
 					_putchar(ui);
-					count++;
 					break;
 
 				case 's':
-					count++;
 					count2 += str_case(args, count);
 					break;
 
 				case '%':
 					_putchar('%');
-					count++;
 					break;
+
+				default :
+					return (1);
 			}
 		}
 	}
