@@ -10,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int len, ui, count, count2;
+	long int len, ui, count, count2;
 	va_list args;
 
 	count = 0;
@@ -40,9 +40,6 @@ int _printf(const char *format, ...)
 				case '%':
 					_putchar('%');
 					break;
-
-				default :
-					return (1);
 			}
 		}
 	}
