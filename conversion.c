@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * conv - formats character based on directive specified.
@@ -49,6 +48,5 @@ int conv(va_list args, char position, int dircnt)
 			_putchar(position);
 			break;
 	}
-
 	return (bytecnt);
 }
