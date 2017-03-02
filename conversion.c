@@ -6,16 +6,16 @@
  * @args: yea
  * @position: yep
  * @dircnt: yup
- * @bytecnt: lol
  *
  * Return: byes printed to stdout.
  */
-int conv(va_list args, char position, int dircnt, int bytecnt)
+int conv(va_list args, char position, int dircnt)
 {
-	int ui;
+	int ui, bytecnt;
 	char *str;
 
 	ui = 0;
+	bytecnt = 0;
 	switch (position)
 	{
 		case 'c':

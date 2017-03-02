@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		{
 			len++;
 			dircnt++;
-			bytecnt += conv(args, format[len], dircnt, bytecnt);
+			bytecnt += conv(args, format[len], dircnt);
 		}
 	}
 	va_end(args);

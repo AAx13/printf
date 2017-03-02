@@ -12,7 +12,7 @@ int print_str(char *str);
 void print_num(int n);
 
 /* */
-int conv(va_list args, char position, int dircnt, int bytecnt);
+int conv(va_list args, char position, int dircnt);
 
 /* _printf - function that produces output according to a format. */
 int _printf(const char *format, ...);
