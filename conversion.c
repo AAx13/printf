@@ -4,8 +4,9 @@
 /**
  * conv - blah
  * @args: yea
- * @format: yep
- * @bytecnt: yup
+ * @position: yep
+ * @dircnt: yup
+ * @bytecnt: lol
  *
  * Return: byes printed to stdout.
  */
