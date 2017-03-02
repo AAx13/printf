@@ -35,7 +35,7 @@ int conv(va_list args, char position, int dircnt)
 			}
 			else
 			{
-				bytecnt = print_str("(null)");
+				bytecnt = print_str("(null)") - 1;
 			}
 			break;
 
