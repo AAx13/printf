@@ -14,10 +14,13 @@ int str_case(va_list args, int count)
 	char *str;
 
 	str = va_arg(args, char *);
-	count2 = print_str(str);
-	if (count > 0)
+	if (str)
 	{
-		count2 -= 1;
+		count2 = print_str(str);
+		if (count > 0)
+		{
+			count2 -= 1;
+		}
 	}
 
 	return (count2);

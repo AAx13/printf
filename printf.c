@@ -10,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	long int len, ui, count, count2;
+	long int len, count, count2;
 	va_list args;
 
 	count = 0;
@@ -25,22 +25,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			len++;
-			count++;
-			switch (format[len])
-			{
-				case 'c':
-					ui =  va_arg(args, int);
-					_putchar(ui);
-					break;
-
-				case 's':
-					count2 += str_case(args, count);
-					break;
-
-				case '%':
-					_putchar('%');
-					break;
-			}
+			count2 += conv(args, format, len, count, count2);
 		}
 	}
 	va_end(args);
