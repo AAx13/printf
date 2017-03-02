@@ -27,7 +27,7 @@ int conv(va_list args, char position, int dircnt, int bytecnt)
 			str = va_arg(args, char *);
 			if (str)
 			{
-				bytecnt += print_str(str);
+				bytecnt = print_str(str);
 				if (dircnt)
 				{
 					bytecnt -= 1;
@@ -35,7 +35,7 @@ int conv(va_list args, char position, int dircnt, int bytecnt)
 			}
 			else
 			{
-				bytecnt += print_str("(null)");
+				bytecnt = print_str("(null)");
 			}
 			break;
 
