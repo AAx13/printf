@@ -21,7 +21,7 @@ int conv(va_list args, const char *format, int len, int count, int count2)
 	{
 		case 'c':
 			ui = va_arg(args, int);
-			if (ui == -1)
+			if (ui == -1 || ui == 0)
 			{
 				count2 += print_str("(null)");
 				break;
@@ -31,6 +31,7 @@ int conv(va_list args, const char *format, int len, int count, int count2)
 
 		case 's':
 			count2 += str_case(args, count);
+			printf("%d\n", count2);
 			break;
 
 		case '%':
