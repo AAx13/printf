@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * str_case - blah
@@ -21,6 +22,10 @@ int str_case(va_list args, int count)
 		{
 			count2 -= 1;
 		}
+	}
+	else
+	{
+		count2 = print_str("(null)") - 1;
 	}
 
 	return (count2);

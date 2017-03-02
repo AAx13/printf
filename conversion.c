@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * conv - blah
@@ -20,6 +21,11 @@ int conv(va_list args, const char *format, int len, int count, int count2)
 	{
 		case 'c':
 			ui = va_arg(args, int);
+			if (ui == -1)
+			{
+				count2 += print_str("(null)");
+				break;
+			}
 			_putchar(ui);
 			break;
 
