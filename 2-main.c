@@ -6,8 +6,8 @@ int main(void)
 	int len, len2;
 	char *s = "Holberton";
 
-	len = _printf("%s %s\n", s, s);
-	len2 = printf("%s %s\n", s, s);
+	len = _printf("%s %s\n", s);
+	len2 = printf("%s %c\n", s);
 
 	printf("my printf: [ %d ] | original printf: [ %d ]\n", len, len2);
 

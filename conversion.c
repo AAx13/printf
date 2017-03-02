@@ -5,33 +5,37 @@
  * conv - blah
  * @args: yea
  * @format: yep
- * @len: yep
- * @count: lol
- * @count2: yup
+ * @bytecnt: yup
  *
  * Return: byes printed to stdout.
  */
-int conv(va_list args, const char *format, int len, int count, int count2)
+int conv(va_list args, char position, int dircnt, int bytecnt)
 {
 	int ui;
+	char *str;
 
 	ui = 0;
-	count++;
-	switch (format[len])
+	switch (position)
 	{
 		case 'c':
 			ui = va_arg(args, int);
-			if (ui == -1 || ui == 0)
-			{
-				count2 += print_str("(null)");
-				break;
-			}
 			_putchar(ui);
 			break;
 
 		case 's':
-			count2 += str_case(args, count);
-			printf("%d\n", count2);
+			str = va_arg(args, char *);
+			if (str)
+			{
+				bytecnt += print_str(str);
+				if (dircnt)
+				{
+					bytecnt -= 1;
+				}
+			}
+			else
+			{
+				bytecnt += print_str("(null)");
+			}
 			break;
 
 		case '%':
@@ -40,10 +44,10 @@ int conv(va_list args, const char *format, int len, int count, int count2)
 
 		default:
 			_putchar('%');
-			count2++;
-			_putchar(format[len]);
+			bytecnt++;
+			_putchar(position);
 			break;
 	}
 
-	return (count2 - 1);
+	return (bytecnt);
 }

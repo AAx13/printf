@@ -10,11 +10,11 @@
  */
 int _printf(const char *format, ...)
 {
-	long int len, count, count2;
+	long int len, bytecnt, dircnt;
 	va_list args;
 
-	count = 0;
-	count2 = 0;
+	dircnt = 0;
+	bytecnt = 0;
 	va_start(args, format);
 	for (len = 0; format[len] != '\0'; len++)
 	{
@@ -25,12 +25,13 @@ int _printf(const char *format, ...)
 		else
 		{
 			len++;
-			count2 += conv(args, format, len, count, count2);
+			dircnt++;
+			bytecnt += conv(args, format[len], dircnt, bytecnt);
 		}
 	}
 	va_end(args);
-	if (count > 0)
-		len -= count;
-	len += count2;
+	if (dircnt > 0)
+		len -= dircnt;
+	len += bytecnt;
 	return (len);
 }
