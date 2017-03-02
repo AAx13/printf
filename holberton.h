@@ -11,7 +11,7 @@ int print_str(char *str);
 /* print_num - function that prints numbers to stdout. */
 void print_num(int n);
 
-/* */
+/* conv - formats character based on directive specified. */
 int conv(va_list args, char position, int dircnt);
 
 /* _printf - function that produces output according to a format. */

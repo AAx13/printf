@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * conv - blah
- * @args: yea
- * @position: yep
- * @dircnt: yup
+ * conv - formats character based on directive specified.
+ * @args: Pointer to list of variable length arguments.
+ * @position: Character to read and format based on directives.
+ * @dircnt: To track number of directives called.
  *
  * Return: byes printed to stdout.
  */
