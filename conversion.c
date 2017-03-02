@@ -33,9 +33,13 @@ int conv(va_list args, char position, int dircnt)
 					bytecnt -= 1;
 				}
 			}
-			else
+			else if (str == NULL)
 			{
 				bytecnt = print_str("(null)") - 1;
+				}
+			else
+			{
+				bytecnt = print_str(str);
 			}
 			break;
 
