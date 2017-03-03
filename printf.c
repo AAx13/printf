@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	}
 	else
 	{
-		return (0);
+		return (-1);
 	}
 	for (len = 0; format[len] != '\0'; len++)
 	{
