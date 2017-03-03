@@ -14,7 +14,14 @@ int _printf(const char *format, ...)
 
 	dircnt = 0;
 	bytecnt = 0;
-	va_start(args, format);
+	if (format)
+	{
+		va_start(args, format);
+	}
+	else
+	{
+		return (0);
+	}
 	for (len = 0; format[len] != '\0'; len++)
 	{
 		if (format[len] != '%')

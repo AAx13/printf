@@ -5,7 +5,7 @@
  * print_str - writes a string to stdout.
  * @str: Contains to desired string to write to stdout.
  *
- * Return: length of string including null byte.
+ * Return: length of string excluding null byte.
  */
 int print_str(char *str)
 {

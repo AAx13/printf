@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * conv - formats character based on directive specified.
@@ -24,17 +25,17 @@ int conv(va_list args, char position, int dircnt)
 
 		case 's':
 			str = va_arg(args, char *);
-			if (str)
+			if (str == NULL)
+			{
+				bytecnt = print_str("(null)") - 1;
+			}
+			else
 			{
 				bytecnt = print_str(str);
 				if (dircnt)
 				{
 					bytecnt -= 1;
 				}
-			}
-			else
-			{
-				bytecnt = print_str("(null)") - 1;
 			}
 			break;
 
