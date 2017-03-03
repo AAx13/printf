@@ -31,6 +31,10 @@ int _printf(const char *format, ...)
 		else
 		{
 			len++;
+			if (!format[len])
+			{
+				return (-1);
+			}
 			dircnt++;
 			bytecnt += conv(args, format[len], dircnt);
 		}
