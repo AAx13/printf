@@ -47,7 +47,6 @@ int conv(va_list args, char position, int dircnt)
 			_putchar('%');
 			bytecnt++;
 			_putchar(position);
-			break;
 	}
 	return (bytecnt);
 }
