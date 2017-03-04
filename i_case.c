@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * d_case - handle integer conversion specifiers.
+ * i_case - handle integer conversion specifiers.
  * @args: Pointer to list of variable length arguments.
  *
  * Return: bytes writen to stdout.
  */
-int d_case(va_list args)
+int i_case(va_list args)
 {
 	int i;
 	int bytecnt;

@@ -27,6 +27,10 @@ int conv(va_list args, char position, int dircnt)
 			bytecnt = d_case(args);
 			break;
 
+		case 'i':
+			bytecnt = d_case(args);
+			break;
+
 		case '%':
 			_putchar('%');
 			break;
