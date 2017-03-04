@@ -2,7 +2,7 @@
 
 ## Functions
 
-[_printf.c](../printf/blob/master/printf.c)
+[_printf.c](../printf/blob/printf.c)
 ```c
 /* _printf - function that produces output according to format. */
 int _printf(const char *format, ...);
