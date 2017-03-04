@@ -11,7 +11,7 @@ int print_str(char *str);
 /* print_int - function that prints numbers to stdout. */
 int print_int(int n);
 
-/* conv - formats character based on conversion specifiers. */
+/* conv - passes to case function based on conversion specifiers. */
 int conv(va_list args, char position, int dircnt);
 
 /* c_case - handle character conversion specifiers. */
