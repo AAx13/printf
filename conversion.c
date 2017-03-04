@@ -24,11 +24,11 @@ int conv(va_list args, char position, int dircnt)
 			break;
 
 		case 'd':
-			bytecnt = d_case(args);
+			bytecnt = d_case(args, dircnt);
 			break;
 
 		case 'i':
-			bytecnt = d_case(args);
+			bytecnt = d_case(args, dircnt);
 			break;
 
 		case '%':

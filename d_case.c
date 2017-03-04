@@ -4,10 +4,11 @@
 /**
  * d_case - handle integer conversion specifiers.
  * @args: Pointer to list of variable length arguments.
+ * @dircnt: Tracks number of directives called.
  *
  * Return: bytes writen to stdout.
  */
-int d_case(va_list args)
+int d_case(va_list args, int dircnt)
 {
 	int i;
 	int bytecnt;
@@ -18,8 +19,14 @@ int d_case(va_list args)
 	{
 		bytecnt += _putchar('0');
 	}
-
-	bytecnt += print_int(i);
+	else
+	{
+		bytecnt += print_int(i);
+		if (dircnt)
+		{
+			bytecnt -= 1;
+		}
+	}
 
 	return (bytecnt);
 }
