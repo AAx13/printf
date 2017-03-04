@@ -8,11 +8,20 @@ int _putchar(char c);
 /* print_str - writes a string to stdout. */
 int print_str(char *str);
 
-/* print_num - function that prints numbers to stdout. */
-void print_num(int n);
+/* print_int - function that prints numbers to stdout. */
+int print_int(int n);
 
-/* conv - formats character based on directive specified. */
+/* conv - formats character based on conversion specifiers. */
 int conv(va_list args, char position, int dircnt);
+
+/* c_case - handle character conversion specifiers. */
+void c_case(va_list args);
+
+/* s_case - handle string conversion specifiers. */
+int s_case(va_list args, int dircnt);
+
+/* d_case - handle integer conversion specifiers */
+int d_case(va_list args);
 
 /* _printf - function that produces output according to a format. */
 int _printf(const char *format, ...);
