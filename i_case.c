@@ -3,7 +3,6 @@
 /**
  * i_case - handle integer conversion specifiers.
  * @args: Pointer to list of variable length arguments.
- * @dircnt: Tracks number of directives called.
  *
  * Return: bytes writen to stdout.
  */
