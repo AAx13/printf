@@ -21,10 +21,10 @@ void c_case(va_list args);
 int s_case(va_list args, int dircnt);
 
 /* d_case - handle integer conversion specifiers */
-int d_case(va_list args, int dircnt);
+int d_case(va_list args);
 
 /* i_case - handle integer conversion specifiers. */
-int i_case(va_list args, int dircnt);
+int i_case(va_list args);
 
 /* _printf - function that produces output according to a format. */
 int _printf(const char *format, ...);

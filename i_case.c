@@ -7,7 +7,7 @@
  *
  * Return: bytes writen to stdout.
  */
-int i_case(va_list args, int dircnt)
+int i_case(va_list args)
 {
 	int i;
 	int bytecnt;
@@ -16,15 +16,11 @@ int i_case(va_list args, int dircnt)
 	i = va_arg(args, int);
 	if (!i)
 	{
-		bytecnt += _putchar('0');
+		bytecnt = _putchar('0') - 1;
 	}
 	else
 	{
-		bytecnt += print_int(i);
-		if (dircnt)
-		{
-			bytecnt -= 1;
-		}
+		bytecnt = print_int(i);
 	}
 
 	return (bytecnt);
