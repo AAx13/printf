@@ -5,7 +5,7 @@
  * print_int - function to write numbers to stdout.
  * @n: Contains the number passed to write to stdout.
  *
- * Return: Bytes writen.
+ * Return: Bytes written.
  */
 int print_int(int n)
 {
@@ -34,6 +34,5 @@ int print_int(int n)
 	}
 
 	return (bytecnt - 1);
-
 
 }

@@ -4,7 +4,7 @@
  * d_case - handle integer conversion specifiers.
  * @args: Pointer to list of variable length arguments.
  *
- * Return: bytes writen to stdout.
+ * Return: bytes written to stdout.
  */
 int d_case(va_list args)
 {
